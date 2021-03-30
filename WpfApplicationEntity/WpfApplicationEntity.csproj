@@ -63,7 +63,39 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Forms\GroupWindow.xaml">
+    <Page Include="Forms\Action.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\ActionForTheNeedy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\Needy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\RegistrationFoAVolunteer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\RegistrationForANeeds.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\Service.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\TypeAction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\TypeService.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\VolunteerWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -73,7 +105,6 @@
     </Page>
     <Compile Include="API\Action for the needy.cs" />
     <Compile Include="API\Action.cs" />
-    <Compile Include="API\DataBaseRequest.cs" />
     <Compile Include="API\MyDBContext.cs" />
     <Compile Include="API\Needy.cs" />
     <Compile Include="API\Registration for a volunteer.cs" />
@@ -86,8 +117,32 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Forms\GroupWindow.xaml.cs">
-      <DependentUpon>GroupWindow.xaml</DependentUpon>
+    <Compile Include="Forms\Action.xaml.cs">
+      <DependentUpon>Action.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ActionForTheNeedy.xaml.cs">
+      <DependentUpon>ActionForTheNeedy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Needy.xaml.cs">
+      <DependentUpon>Needy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegistrationFoAVolunteer.xaml.cs">
+      <DependentUpon>RegistrationFoAVolunteer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegistrationForANeeds.xaml.cs">
+      <DependentUpon>RegistrationForANeeds.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Service.xaml.cs">
+      <DependentUpon>Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TypeAction.xaml.cs">
+      <DependentUpon>TypeAction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TypeService.xaml.cs">
+      <DependentUpon>TypeService.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VolunteerWindow.xaml.cs">
+      <DependentUpon>VolunteerWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

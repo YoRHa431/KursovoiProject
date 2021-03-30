@@ -13,7 +13,7 @@ namespace WpfApplicationEntity.API
         [Required]
         public string Name { get; set; }
         [Required]
-        public string Discription { get; set; }
+        public string SpendingTime { get; set; }
         [Required]
         public virtual ICollection<Type_Service> Type_Services { get; set; }
     }

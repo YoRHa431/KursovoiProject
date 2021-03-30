@@ -9,28 +9,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfApplicationEntity.Forms
 {
     /// <summary>
-    /// Логика взаимодействия для GroupWindow.xaml
+    /// Логика взаимодействия для ActionForTheNeedy.xaml
     /// </summary>
-    public partial class GroupWindow : Window
+    public partial class ActionForTheNeedy : Page
     {
-        private bool add_edit;
-        public GroupWindow()
+        public ActionForTheNeedy()
         {
             InitializeComponent();
-        }
-        public GroupWindow(bool add_edit)
-        {
-            InitializeComponent();
-            this.add_edit = add_edit;
-        }
-
-        private void ButtonAddEditGroup_Click(object sender, RoutedEventArgs e)
-        {
         }
     }
 }

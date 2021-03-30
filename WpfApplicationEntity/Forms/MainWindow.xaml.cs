@@ -46,14 +46,65 @@ namespace WpfApplicationEntity
             catch (Exception ex) { MessageBox.Show(ex.Message, "Ошибка"); }
             //this.ShowAll();
         }
-        #region Группа
-        private void addGroupButton_Click(object sender, RoutedEventArgs e)
-        {
-        }
-        #endregion
         private void ShowAll()
         {
             
+        }
+
+        private void addVolunteerButton_Click(object sender, RoutedEventArgs e)
+        {
+            Forms.VolunteerWindow g = new Forms.VolunteerWindow(true);
+            if (g.ShowDialog() == true)
+                this.ShowAll();
+        }
+
+        private void addNeedyButton_Click(object sender, RoutedEventArgs e)
+        {
+            Forms.NeedyWindow g = new Forms.NeedyWindow(true);
+            if (g.ShowDialog() == true)
+                this.ShowAll();
+        }
+
+        private void addActionButton_Click(object sender, RoutedEventArgs e)
+        {
+            Forms.ActionWindow g = new Forms.ActionWindow(true);
+            if (g.ShowDialog() == true)
+                this.ShowAll();
+        }
+
+        private void addServiceButton_Click(object sender, RoutedEventArgs e)
+        {
+            Forms.ServiceWindow g = new Forms.ServiceWindow(true);
+            if (g.ShowDialog() == true)
+                this.ShowAll();
+        }
+
+        private void addTypeActionButton_Click(object sender, RoutedEventArgs e)
+        {
+            Forms.TypeActionWindow g = new Forms.TypeActionWindow(true);
+            if (g.ShowDialog() == true)
+                this.ShowAll();
+        }
+
+        private void addTypeServiceButton_Click(object sender, RoutedEventArgs e)
+        {
+            Forms.TypeServiceWindow g = new Forms.TypeServiceWindow(true);
+            if (g.ShowDialog() == true)
+                this.ShowAll();
+        }
+
+        private void addRegistationForAVolunteerButton_Click(object sender, RoutedEventArgs e)
+        {
+            Forms.RegistrationForAVolunteerWindow g = new Forms.RegistrationForAVolunteerWindow(true);
+            if (g.ShowDialog() == true)
+                this.ShowAll();
+        }
+
+        private void addRegistationForANeedsButton_Click(object sender, RoutedEventArgs e)
+        {
+            Forms.RegistrationForANeedsWindow g = new Forms.RegistrationForANeedsWindow(true);
+            if (g.ShowDialog() == true)
+                this.ShowAll();
         }
     }
 }
