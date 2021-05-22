@@ -43,6 +43,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net40\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -68,6 +71,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Forms\ActionForTheNeedy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\Autorization.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -105,6 +112,7 @@
     </Page>
     <Compile Include="API\Action for the needy.cs" />
     <Compile Include="API\Action.cs" />
+    <Compile Include="API\DatabaseRequest.cs" />
     <Compile Include="API\MyDBContext.cs" />
     <Compile Include="API\Needy.cs" />
     <Compile Include="API\Registration for a volunteer.cs" />
@@ -122,6 +130,9 @@
     </Compile>
     <Compile Include="Forms\ActionForTheNeedy.xaml.cs">
       <DependentUpon>ActionForTheNeedy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Autorization.xaml.cs">
+      <DependentUpon>Autorization.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forms\Needy.xaml.cs">
       <DependentUpon>Needy.xaml</DependentUpon>

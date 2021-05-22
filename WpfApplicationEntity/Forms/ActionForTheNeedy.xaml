@@ -1,13 +1,19 @@
-﻿<Page x:Class="WpfApplicationEntity.Forms.ActionForTheNeedy"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
-	Title="ActionForTheNeedy">
-
+﻿<Window x:Class="WpfApplicationEntity.Forms.ActionForTheNeedy"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Loaded="Window_Loaded"
+        Title="ActionForTheNeedy" Height="125" Width="200">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="0" Grid.Row="0" Content="Name" Padding="3" Margin="3"  />
+        <TextBox x:Name="Name" Grid.Column="1" Grid.Row="0" Padding="3" Margin="3"  />
+        <Button x:Name="ButtonAddEditGroup"  Grid.Column="0" Grid.Row="5" Content="Добавить" Grid.ColumnSpan="2" Padding="3" Margin="3" Click="ButtonAddEditAction_Click"  />
     </Grid>
-</Page>
+</Window>

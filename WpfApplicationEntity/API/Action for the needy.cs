@@ -11,10 +11,9 @@ namespace WpfApplicationEntity.API
         [Key]
         public int ID { get; set; }
         [Required]
+        public string Name { get; set; }
         public virtual ICollection<Volunteer> Volonteers { get; set; }
-        [Required]
         public virtual ICollection<Needy> Needys { get; set; }
-        [Required]
         public virtual ICollection<Action> Actions { get; set; }
     }
 }

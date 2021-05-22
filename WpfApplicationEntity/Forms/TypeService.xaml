@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplicationEntity.Forms"
         mc:Ignorable="d"
+        Loaded="Window_Loaded"
         Title="TypeServiceWindow" Height="200" Width="250">
     <Grid>
         <Grid.RowDefinitions>
@@ -19,7 +20,7 @@
         <Label Grid.Column="0" Grid.Row="0" Content="Наименование" Padding="3" Margin="3"  />
         <Label Grid.Column="0" Grid.Row="1" Content="Описание" Padding="3" Margin="3"  />
         <TextBox x:Name="name" Grid.Column="1" Grid.Row="0" Padding="3" Margin="3"  />
-        <TextBox x:Name="discription" Grid.Column="1" Grid.Row="1" Padding="3" Margin="3"  />
+        <TextBox x:Name="discripsion" Grid.Column="1" Grid.Row="1" Padding="3" Margin="3"  />
         <Button x:Name="ButtonAddEditGroup"  Grid.Column="0" Grid.Row="2" Content="Добавить" Grid.ColumnSpan="2" Padding="3" Margin="3" Click="ButtonAddEditTypeService_Click"  />
     </Grid>
 </Window>

@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplicationEntity.Forms"
         mc:Ignorable="d"
+        Loaded="Window_Loaded"
         Title="NeedyWindow" Height="400" Width="200">
     <Grid>
         <Grid.RowDefinitions>
@@ -14,6 +15,8 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition> 
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
@@ -28,6 +31,8 @@
         <Label Grid.Column="0" Grid.Row="4" Content="Инвалидность" Padding="3" Margin="3"  />
         <Label Grid.Column="0" Grid.Row="5" Content="Номер телефона" Padding="3" Margin="3"  />
         <Label Grid.Column="0" Grid.Row="6" Content="Пол" Padding="3" Margin="3"  />
+        <Label Grid.Column="0" Grid.Row="7" Content="Дата подачи" Padding="3" Margin="3"  />
+        <Label Grid.Column="0" Grid.Row="8" Content="Название" Padding="3" Margin="3"  />
         <TextBox x:Name="Addres" Grid.Column="1" Grid.Row="0" Padding="3" Margin="3"  />
         <TextBox x:Name="MiddleName" Grid.Column="1" Grid.Row="1" Padding="3" Margin="3"  />
         <TextBox x:Name="Surname" Grid.Column="1" Grid.Row="2" Padding="3" Margin="3"  />
@@ -35,6 +40,8 @@
         <TextBox x:Name="Disability" Grid.Column="1" Grid.Row="4" Padding="3" Margin="3"  />
         <TextBox x:Name="PhoneNumber" Grid.Column="1" Grid.Row="5" Padding="3" Margin="3"  />
         <TextBox x:Name="Genum" Grid.Column="1" Grid.Row="6" Padding="3" Margin="3"  />
-        <Button x:Name="ButtonAddEditNeedy"  Grid.Column="0" Grid.Row="7" Content="Добавить" Grid.ColumnSpan="2" Padding="3" Margin="3" Click="ButtonAddEditNeedy_Click"  />
+        <ComboBox x:Name="comboBlockAddEditRegistrationForANeeds" Grid.Column="1" Grid.Row="7" Padding="3" Margin="3"  />
+        <ComboBox x:Name="comboBlockAddEditActionForTheNeedy" Grid.Column="1" Grid.Row="8" Padding="3" Margin="3"  />
+        <Button x:Name="ButtonAddEditNeedy"  Grid.Column="0" Grid.Row="9" Content="Добавить" Grid.ColumnSpan="2" Padding="3" Margin="3" Click="ButtonAddEditNeedy_Click"  />
     </Grid>
 </Window>

@@ -14,5 +14,6 @@ namespace WpfApplicationEntity.API
         public string Name { get; set; }
         [Required]
         public string Discripsion { get; set; }
+        public virtual ICollection<Service> Services { get; set; }
     }
 }

@@ -12,11 +12,8 @@ namespace WpfApplicationEntity.API
         public int ID { get; set; }
         [Required]
         public string Date { get; set; }
-        [Required]
         public virtual ICollection<Registration_for_a_needs> Registration_for_a_needss { get; set; }
-        [Required]
         public virtual ICollection<Service> Services { get; set; }
-        [Required]
         public virtual ICollection<Volunteer> volunteers { get; set; }
     }
 }

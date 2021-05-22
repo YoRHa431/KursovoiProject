@@ -16,9 +16,8 @@ namespace WpfApplicationEntity.API
         public string ApplicationDate { get; set; }
         [Required]
         public string ActualDate { get; set; }
-        [Required]
         public virtual ICollection<Needy> Needys { get; set; }
-        [Required]
         public virtual ICollection<Service> Services { get; set; }
+        public virtual Registration_for_a_volunteer Registration_for_a_volunteer { get; set; }
     }
 }

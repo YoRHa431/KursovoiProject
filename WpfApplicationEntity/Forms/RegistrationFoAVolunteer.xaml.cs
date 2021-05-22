@@ -18,6 +18,14 @@ namespace WpfApplicationEntity.Forms
     /// </summary>
     public partial class RegistrationForAVolunteerWindow : Window
     {
+        public RegistrationForAVolunteerWindow(bool add_edit, int ID)
+        {
+            InitializeComponent();
+            this.add_edit = add_edit;
+            this.EditID = ID;
+        }
+        private int ID;
+        private int EditID;
         private bool add_edit;
         public RegistrationForAVolunteerWindow()
         {
@@ -30,32 +38,57 @@ namespace WpfApplicationEntity.Forms
         }
         private void ButtonAddEditRegistrationForAVolunteer_Click(object sender, RoutedEventArgs e)
         {
-            if (this.add_edit == true)
-                if (date.Text != string.Empty)
-                {
-                    WpfApplicationEntity.API.Registration_for_a_volunteer objectRegistrationForAVolunteer = new WpfApplicationEntity.API.Registration_for_a_volunteer();
-                    objectRegistrationForAVolunteer.Date = date.Text;
-                    try
+            using (WpfApplicationEntity.API.MyDBContext objectMyDBContext = new WpfApplicationEntity.API.MyDBContext())
+            {
+                if (this.add_edit == true)
+                    if (date.Text != string.Empty)
                     {
-                        using (WpfApplicationEntity.API.MyDBContext objectMyDBContext =
-                            new WpfApplicationEntity.API.MyDBContext())
+                        WpfApplicationEntity.API.Registration_for_a_volunteer objectRegistrationForAVolunteer = new WpfApplicationEntity.API.Registration_for_a_volunteer();
+                        objectRegistrationForAVolunteer.Date = date.Text;
+                        try
                         {
+
                             objectMyDBContext.Registration_for_a_volunteers.Add(objectRegistrationForAVolunteer);
                             objectMyDBContext.SaveChanges();
+                            MessageBox.Show("Регистрация волонтёра добавлена");
+                            this.DialogResult = true;
                         }
-                        MessageBox.Show("Регистрация волонтёра добавлена");
-                        this.DialogResult = true;
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message, "ОШИБКА", MessageBoxButton.OK, MessageBoxImage.Error);
+                        }
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        MessageBox.Show(ex.Message, "ОШИБКА", MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBox.Show("Заполните все поля!", "Ошибка!");
+                        this.DialogResult = false;
                     }
-                }
                 else
                 {
-                    MessageBox.Show("Заполните все поля!", "Ошибка!");
-                    this.DialogResult = false;
+                    var result = objectMyDBContext.Registration_for_a_volunteers.Find(EditID);
+                    result.Date = date.Text;
                 }
+                objectMyDBContext.SaveChanges();
+            }
+            this.Close();
+        }
+        private bool IsDataCorrcet()
+        {
+            return date.Text != string.Empty;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            using (WpfApplicationEntity.API.MyDBContext objectMyDBContext = new WpfApplicationEntity.API.MyDBContext())
+            {
+                WpfApplicationEntity.API.Registration_for_a_volunteer naz = new WpfApplicationEntity.API.Registration_for_a_volunteer();
+                if (add_edit == false)
+                {
+                    ButtonAddEditGroup.Content = "Сохранить";
+                    naz = objectMyDBContext.Registration_for_a_volunteers.Find(EditID);
+                    date.Text = naz.Date;
+                }
+            }
         }
     }
 }

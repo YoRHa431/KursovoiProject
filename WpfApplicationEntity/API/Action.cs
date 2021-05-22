@@ -20,8 +20,8 @@ namespace WpfApplicationEntity.API
         public int NumberOfVolonteers { get; set; }
         [Required]
         public int NumberOfNeeds { get; set; }
-        [Required]
-        public virtual ICollection<Type_Action> Type_Actions { get; set; }
+        public virtual Type_Action Type_Action { get; set; }
+        public virtual Action_for_the_needy Action_for_the_needy { get; set; }
     }
 }
 //using System;

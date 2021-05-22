@@ -24,5 +24,7 @@ namespace WpfApplicationEntity.API
         public string PhoneNumber { get; set; }
         [Required]
         public string Genus { get; set; }
+        public virtual Registration_for_a_needs Registration_for_a_needs { get; set; }
+        public virtual Action_for_the_needy Action_for_the_needy { get; set; }
     }
 }

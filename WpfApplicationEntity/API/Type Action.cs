@@ -13,8 +13,9 @@ namespace WpfApplicationEntity.API
         [Required]
         public string Name { get; set; }
         [Required]
-        public string Discripsion { get; set; }
+        public string Discription { get; set; }
         [Required]
         public string Duration { get; set; }
+        public virtual ICollection<Action> Action { get; set; }
     }
 }

@@ -17,5 +17,6 @@ namespace WpfApplicationEntity.API
         public DbSet<Type_Service> Type_Services { get; set; }
         public DbSet<Registration_for_a_volunteer> Registration_for_a_volunteers { get; set; }
         public DbSet<Registration_for_a_needs> Registration_for_a_needss { get; set; }
+        public static MyDBContext DBContext = new WpfApplicationEntity.API.MyDBContext();
     }
 }

@@ -2,9 +2,9 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="WpfApplicationEntity.MainWindow"
-        Title="Entity Framework" Height="350" Width="525" Loaded="Window_Loaded">
+        Title="Entity Framework" Height="358.8" Width="525" Loaded="Window_Loaded">
     <Grid>
-        <TabControl>
+        <TabControl Margin="0,-10,0.4,9.8">
             <TabItem x:Name="volunteerTab">
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
@@ -14,8 +14,10 @@
                 <StackPanel>
                     <WrapPanel>
                         <Button x:Name="addVolunteerButton"  Content="Добавить" Margin="3" Padding="3" Click="addVolunteerButton_Click"/>
-                        <Button x:Name="editVolunteerButton"  Content="Удалить" Margin="3" Padding="3"/>
-                        <Button x:Name="deleteVolunteerButton"  Content="Изменить" Margin="3" Padding="3"/>
+                        <Button x:Name="deleteVolunteerButton"  Content="Удалить" Margin="3" Padding="3" Click="deleteVolunteerButton_Click"/>
+                        <Button x:Name="editVolunteerButton"  Content="Изменить" Margin="3" Padding="3" Click="editVolunteerButton_Click" RenderTransformOrigin="0.503,0.508"/>
+                        <Button x:Name="ReportEmployeeButton"  Content="Создать отчёт" Margin="3" Padding="3" Click="ReportEmployeeButton_Click"></Button>
+                        <TextBox x:Name="searchVolunteer"  Margin="3" Padding="3" Width="100" TextChanged="searchVolunteer_TextChanged"></TextBox>
                     </WrapPanel>
                     <DataGrid AutoGenerateColumns="False" x:Name="VolunteerGrid" IsReadOnly="True" CanUserAddRows="False" CanUserDeleteRows="False" SelectionMode="Single">
                         <DataGrid.Columns>
@@ -26,9 +28,11 @@
                             <DataGridTextColumn Binding="{Binding SurName}" Header="Фамилия"/>
                             <DataGridTextColumn Binding="{Binding LastName}" Header="Отчество"/>
                             <DataGridTextColumn Binding="{Binding Login}" Header="Логин"/>
-                            <DataGridTextColumn Binding="{Binding Pssword}" Header="Пароль"/>
+                            <DataGridTextColumn Binding="{Binding Password}" Header="Пароль"/>
                             <DataGridTextColumn Binding="{Binding PhoneNumber}" Header="Номер телефона"/>
                             <DataGridTextColumn Binding="{Binding Genus}" Header="Пол"/>
+                            <DataGridTextColumn Binding="{Binding Action_for_the_needy.Name}" Header="Акция для нуждающегося"/>
+                            <DataGridTextColumn Binding="{Binding Registration_for_a_volunteer.Date}" Header="Регистрация для волонтёра"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </StackPanel>
@@ -42,18 +46,20 @@
                 <StackPanel>
                     <WrapPanel>
                         <Button x:Name="addActionButton"  Content="Добавить" Margin="3" Padding="3" Click="addActionButton_Click"/>
-                        <Button x:Name="editActionButton"  Content="Удалить" Margin="3" Padding="3"/>
-                        <Button x:Name="deleteActionButton"  Content="Изменить" Margin="3" Padding="3"/>
+                        <Button x:Name="deleteActionButton"  Content="Удалить" Margin="3" Padding="3" Click="deleteActionButton_Click" RenderTransformOrigin="0.504,0.508"/>
+                        <Button x:Name="editActionButton"  Content="Изменить" Margin="3" Padding="3" Click="editActionButton_Click"/>
+                        <Button x:Name="ReportActionButton"  Content="Создать отчёт" Margin="3" Padding="3" Click="ReportActionButton_Click"></Button>
                     </WrapPanel>
                     <DataGrid AutoGenerateColumns="False" x:Name="ActionGrid">
                         <DataGrid.Columns>
                             <DataGridTextColumn Binding="{Binding ID}" Header="Id" Visibility="Visible"/>
-                            <DataGridTextColumn Binding="{Binding StartTime}" Header="Время начала"/>
+                            <DataGridTextColumn Binding="{Binding StarTime}" Header="Время начала"/>
                             <DataGridTextColumn Binding="{Binding EndTime}" Header="Время конца"/>
                             <DataGridTextColumn Binding="{Binding TheDateOfThe}" Header="Дата проведения"/>
                             <DataGridTextColumn Binding="{Binding NumberOfVolonteers}" Header="Количество волонтёров"/>
                             <DataGridTextColumn Binding="{Binding NumberOfNeeds}" Header="Количество нуждающихся"/>
-                            <DataGridTextColumn Binding="{Binding Type_Actions}" Header="Тип акции"/>
+                            <DataGridTextColumn Binding="{Binding Action_for_the_needy.Name}" Header="Акция для нуждающегося"/>
+                            <DataGridTextColumn Binding="{Binding Type_Action.Name}" Header="Тип акции"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </StackPanel>
@@ -67,8 +73,10 @@
                 <StackPanel>
                     <WrapPanel>
                         <Button x:Name="addNeedyButton"  Content="Добавить" Margin="3" Padding="3" Click="addNeedyButton_Click"/>
-                        <Button x:Name="editNeedyButton"  Content="Удалить" Margin="3" Padding="3"/>
-                        <Button x:Name="deleteNeedyButton"  Content="Изменить" Margin="3" Padding="3"/>
+                        <Button x:Name="deleteNeedyButton"  Content="Удалить" Margin="3" Padding="3" Click="deleteNeedyButton_Click"/>
+                        <Button x:Name="editNeedyButton"  Content="Изменить" Margin="3" Padding="3" RenderTransformOrigin="0.503,0.508" Click="editNeedyButton_Click"/>
+                        <Button x:Name="ReportNeedyButton"  Content="Создать отчёт" Margin="3" Padding="3" Click="ReportEmployeeButton_Click"></Button>
+                        <TextBox x:Name="searchNeedy"  Margin="3" Padding="3" Width="100" TextChanged="searchNeedy_TextChanged"></TextBox>
                     </WrapPanel>
                     <DataGrid AutoGenerateColumns="False" x:Name="needysGrid">
                         <DataGrid.Columns>
@@ -80,8 +88,11 @@
                             <DataGridTextColumn Binding="{Binding Disability}" Header="Инвалидность"/>
                             <DataGridTextColumn Binding="{Binding PhoneNumber}" Header="Номер телефона"/>
                             <DataGridTextColumn Binding="{Binding Genus}" Header="Пол"/>
+                            <DataGridTextColumn Binding="{Binding Registration_for_a_needs.ApplicationDate}" Header="Дата подачи заявления нуждающегося"/>
+                            <DataGridTextColumn Binding="{Binding Action_for_the_needy.Name}" Header="Акция для нуждающегося"/>
                         </DataGrid.Columns>
                     </DataGrid>
+                    <Label/>
                 </StackPanel>
             </TabItem>
             <TabItem x:Name="serviceTab">
@@ -93,15 +104,18 @@
                 <StackPanel>
                     <WrapPanel>
                         <Button x:Name="addServiceButton"  Content="Добавить" Margin="3" Padding="3" Click="addServiceButton_Click"/>
-                        <Button x:Name="editServiceButton"  Content="Удалить" Margin="3" Padding="3"/>
-                        <Button x:Name="deleteServiceButton"  Content="Изменить" Margin="3" Padding="3"/>
+                        <Button x:Name="deleteServiceButton"  Content="Удалить" Margin="3" Padding="3" RenderTransformOrigin="0.504,0.508" Click="deleteServiceButton_Click"/>
+                        <Button x:Name="editServiceButton"  Content="Изменить" Margin="3" Padding="3" Click="editServiceButton_Click"/>
+                        <Button x:Name="ReportServiceButton"  Content="Создать отчёт" Margin="3" Padding="3" Click="ReportEmployeeButton_Click"></Button>
                     </WrapPanel>
                     <DataGrid AutoGenerateColumns="False" x:Name="serviceGrid">
                         <DataGrid.Columns>
                             <DataGridTextColumn Binding="{Binding ID}" Header="ID" Visibility="Hidden"/>
-                            <DataGridTextColumn Binding="{Binding Name}" Header="Имя"/>
-                            <DataGridTextColumn Binding="{Binding Discription}" Header="Описание"/>
-                            <DataGridTextColumn Binding="{Binding Type_Services}" Header="Тип услуги"/>
+                            <DataGridTextColumn Binding="{Binding Name}" Header="Наименование"/> 
+                            <DataGridTextColumn Binding="{Binding SpendingTime}" Header="Затраченное время"/>
+                            <DataGridTextColumn Binding="{Binding Registration_for_a_volunteer.Date}" Header="Регистрация для волонтёра"/>
+                            <DataGridTextColumn Binding="{Binding Registration_for_a_needs.ApplicationDate}" Header="Дата подачи заявления нуждающегося"/>
+                            <DataGridTextColumn Binding="{Binding Type_Service.Name}" Header="Название типа услуги"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </StackPanel>
@@ -115,8 +129,9 @@
                 <StackPanel>
                     <WrapPanel>
                         <Button x:Name="addTypeActionButton"  Content="Добавить" Margin="3" Padding="3" Click="addTypeActionButton_Click"/>
-                        <Button x:Name="editTypeActionButton"  Content="Удалить" Margin="3" Padding="3"/>
-                        <Button x:Name="deleteTypeActionButton"  Content="Изменить" Margin="3" Padding="3"/>
+                        <Button x:Name="deleteTypeActionButton"  Content="Удалить" Margin="3" Padding="3" Click="deleteTypeActionButton_Click"/>
+                        <Button x:Name="editTypeActionButton"  Content="Изменить" Margin="3" Padding="3" Click="editTypeActionButton_Click"/>
+                        <Button x:Name="ReportTypeActionButton"  Content="Создать отчёт" Margin="3" Padding="3" Click="ReportEmployeeButton_Click"></Button>
                     </WrapPanel>
                     <DataGrid AutoGenerateColumns="False" x:Name="typeactionGrid">
                         <DataGrid.Columns>
@@ -137,14 +152,15 @@
                 <StackPanel>
                     <WrapPanel>
                         <Button x:Name="addTypeServiceButton"  Content="Добавить" Margin="3" Padding="3" RenderTransformOrigin="0.503,0.508" Click="addTypeServiceButton_Click"/>
-                        <Button x:Name="editTypeServiceButton"  Content="Удалить" Margin="3" Padding="3"/>
-                        <Button x:Name="deleteTypeServiceButton"  Content="Изменить" Margin="3" Padding="3"/>
+                        <Button x:Name="deleteTypeServiceButton"  Content="Удалить" Margin="3" Padding="3" RenderTransformOrigin="0.504,0.508" Click="deleteTypeServiceButton_Click"/>
+                        <Button x:Name="editTypeServiceButton"  Content="Изменить" Margin="3" Padding="3" Click="editTypeServiceButton_Click"/>
+                        <Button x:Name="ReportTypeServiceButton"  Content="Создать отчёт" Margin="3" Padding="3" Click="ReportEmployeeButton_Click"></Button>
                     </WrapPanel>
                     <DataGrid AutoGenerateColumns="False" x:Name="typeServiceGrid">
                         <DataGrid.Columns>
                             <DataGridTextColumn Binding="{Binding ID}" Header="ID" Visibility="Hidden"/>
                             <DataGridTextColumn Binding="{Binding Name}" Header="Наименование"/>
-                            <DataGridTextColumn Binding="{Binding Discription}" Header="Описание"/>
+                            <DataGridTextColumn Binding="{Binding Discripsion}" Header="Описание"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </StackPanel>
@@ -158,15 +174,14 @@
                 <StackPanel>
                     <WrapPanel>
                         <Button x:Name="addRegistationForAVolunteerButton"  Content="Добавить" Margin="3" Padding="3" Click="addRegistationForAVolunteerButton_Click"/>
-                        <Button x:Name="editRegistationForAVolunteerButton"  Content="Удалить" Margin="3" Padding="3"/>
-                        <Button x:Name="deleteRegistationForAVolunteerButton"  Content="Изменить" Margin="3" Padding="3"/>
+                        <Button x:Name="deleteRegistationForAVolunteerButton"  Content="Удалить" Margin="3" Padding="3" Click="deleteRegistationForAVolunteerButton_Click"/>
+                        <Button x:Name="editRegistationForAVolunteerButton"  Content="Изменить" Margin="3" Padding="3" Click="editRegistationForAVolunteerButton_Click"/>
+                        <Button x:Name="ReportRegistrationForAVolunteerButton"  Content="Создать отчёт" Margin="3" Padding="3" Click="ReportEmployeeButton_Click"></Button>
                     </WrapPanel>
                     <DataGrid AutoGenerateColumns="False" x:Name="registrationforavolunteerGrid">
                         <DataGrid.Columns>
                             <DataGridTextColumn Binding="{Binding ID}" Header="ID" Visibility="Hidden"/>
-                            <DataGridTextColumn Binding="{Binding Registration_for_a_needss}" Header="Запись нуждающихся"/>
-                            <DataGridTextColumn Binding="{Binding Services}" Header="Услуга"/>
-                            <DataGridTextColumn Binding="{Binding volunteers}" Header="Волонтёр"/>
+                            <DataGridTextColumn Binding="{Binding Date}" Header="Дата"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </StackPanel>
@@ -180,8 +195,9 @@
                 <StackPanel>
                     <WrapPanel>
                         <Button x:Name="addRegistationForANeedsButton"  Content="Добавить" Margin="3" Padding="3" Click="addRegistationForANeedsButton_Click"/>
-                        <Button x:Name="editRegistationForANeedsButton"  Content="Удалить" Margin="3" Padding="3"/>
-                        <Button x:Name="deleteRegistationForANeedsButton"  Content="Изменить" Margin="3" Padding="3"/>
+                        <Button x:Name="deleteRegistationForANeedsButton"  Content="Удалить" Margin="3" Padding="3" Click="deleteRegistationForANeedsButton_Click"/>
+                        <Button x:Name="editRegistationForANeedsButton"  Content="Изменить" Margin="3" Padding="3" Click="editRegistationForANeedsButton_Click"/>
+                        <Button x:Name="ReportRegistrationForANeedsButton"  Content="Создать отчёт" Margin="3" Padding="3" Click="ReportEmployeeButton_Click"></Button>
                     </WrapPanel>
                     <DataGrid AutoGenerateColumns="False" x:Name="registrationforaneedsGrid">
                         <DataGrid.Columns>
@@ -189,8 +205,7 @@
                             <DataGridTextColumn Binding="{Binding PlannedDate}" Header="Дата планируемая"/>
                             <DataGridTextColumn Binding="{Binding ApplicationDate}" Header="Дата подачи"/>
                             <DataGridTextColumn Binding="{Binding ActualDate}" Header="Дата фактическая"/>
-                            <DataGridTextColumn Binding="{Binding Needys}" Header="Нуждающийся"/>
-                            <DataGridTextColumn Binding="{Binding Services}" Header="Услуга"/>
+                            <DataGridTextColumn Binding="{Binding Registration_for_a_volunteer.Date}" Header="Регистрация для волонтёра"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </StackPanel>
@@ -203,16 +218,15 @@
                 </TabItem.Header>
                 <StackPanel>
                     <WrapPanel>
-                        <Button x:Name="addActionForTheNeedyButton"  Content="Добавить" Margin="3" Padding="3"/>
-                        <Button x:Name="editActionForTheNeedyButton"  Content="Удалить" Margin="3" Padding="3"/>
-                        <Button x:Name="deleteActionForTheNeedyButton"  Content="Изменить" Margin="3" Padding="3"/>
+                        <Button x:Name="addActionForTheNeedyButton"  Content="Добавить" Margin="3" Padding="3" Click="addActionForTheNeedyButton_Click" />
+                        <Button x:Name="deleteActionForTheNeedyButton"  Content="Удалить" Margin="3" Padding="3" Click="deleteActionForTheNeedyButton_Click"/>
+                        <Button x:Name="editActionForTheNeedyButton"  Content="Изменить" Margin="3" Padding="3" Click="editActionForTheNeedyButton_Click"/>
+                        <Button x:Name="ReportActionForTheNeedyButton"  Content="Создать отчёт" Margin="3" Padding="3" Click="ReportEmployeeButton_Click"></Button>
                     </WrapPanel>
                     <DataGrid AutoGenerateColumns="False" x:Name="actionfortheneedyGrid">
                         <DataGrid.Columns>
                             <DataGridTextColumn Binding="{Binding ID}" Header="ID" Visibility="Hidden"/>
-                            <DataGridTextColumn Binding="{Binding Volonteers}" Header="Волонтёр"/>
-                            <DataGridTextColumn Binding="{Binding Needys}" Header="Нуждающийся"/>
-                            <DataGridTextColumn Binding="{Binding Actions}" Header="Акция"/>
+                            <DataGridTextColumn Binding="{Binding Name}" Header="Название"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </StackPanel>

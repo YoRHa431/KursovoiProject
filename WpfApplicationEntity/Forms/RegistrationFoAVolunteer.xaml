@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplicationEntity.Forms"
         mc:Ignorable="d"
+        Loaded="Window_Loaded"
         Title="RegistrationForAVolunteerWindow" Height="100" Width="200">
     <Grid>
         <Grid.RowDefinitions>

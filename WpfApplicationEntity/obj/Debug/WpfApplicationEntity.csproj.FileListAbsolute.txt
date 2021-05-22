@@ -35,3 +35,5 @@ C:\Учёба 3 курс\Курсовая работа КПЯП\WpfApplicationEn
 C:\Учёба 3 курс\Курсовая работа КПЯП\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\RegistrationForANeeds.baml
 C:\Учёба 3 курс\Курсовая работа КПЯП\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\ActionForTheNeedy.baml
 C:\Учёба 3 курс\Курсовая работа КПЯП\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\ActionForTheNeedy.g.cs
+C:\Учёба 3 курс\Курсовая работа КПЯП\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\Autorization.baml
+C:\Учёба 3 курс\Курсовая работа КПЯП\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\Autorization.g.cs
