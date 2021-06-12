@@ -50,17 +50,17 @@ namespace WpfApplicationEntity.Forms
             {
                 db.Database.Create();
                 WpfApplicationEntity.API.Volunteer objectVolunteer = new WpfApplicationEntity.API.Volunteer();
-                objectVolunteer.Addres = "Creators";
-                objectVolunteer.DateOfBirth = "Creators";
-                objectVolunteer.MiddleName = "Creators";
-                objectVolunteer.SurName = "Creators";
-                objectVolunteer.LastName = "Creators";
+                objectVolunteer.Addres = "г.Браслав, ул.Советская-37, дом 5";
+                objectVolunteer.DateOfBirth = "15.07.1986";
+                objectVolunteer.MiddleName = "Иван";
+                objectVolunteer.SurName = "Крымский";
+                objectVolunteer.LastName = "Иванович";
                 objectVolunteer.Login = "999";
                 objectVolunteer.Password = "666";
-                objectVolunteer.PhoneNumber = "Creators";
-                objectVolunteer.Genus = "Creators";
-                objectVolunteer.Registration_for_a_volunteer = new Registration_for_a_volunteer { ID=0,Date="[eq"};
-                objectVolunteer.Action_for_the_needy = new Action_for_the_needy { Name = "qeddv", ID=0};
+                objectVolunteer.PhoneNumber = "+375292291385";
+                objectVolunteer.Genus = "Мужской";
+                objectVolunteer.Registration_for_a_volunteer = new Registration_for_a_volunteer { ID=0,Date="25.03.2021"};
+                objectVolunteer.Action_for_the_needy = new Action_for_the_needy { Name = "Благотворительный концерт Ангел", ID=0};
                 db.Volunteers.Add(objectVolunteer);
                 db.SaveChanges();
             }

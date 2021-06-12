@@ -6,7 +6,7 @@ using System.Text;
 
 namespace WpfApplicationEntity.API
 {
-    class Action
+    public class Action
     {
         [Key]
         public int ID { get; set; }

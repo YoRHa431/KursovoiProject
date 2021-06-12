@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApplicationEntity.Forms"
         mc:Ignorable="d"
         Loaded="Window_Loaded"
-        Title="ServiceWindow" Height="200" Width="300">
+        Title="ServiceWindow" Height="238.4" Width="300">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -26,7 +26,7 @@
         <Label Grid.Column="0" Grid.Row="3" Content="Регистрация нуждающегося" Padding="3" Margin="3"  />
         <Label Grid.Column="0" Grid.Row="4" Content="Тип услуги" Padding="3" Margin="3"  />
         <TextBox x:Name="name" Grid.Column="1" Grid.Row="0" Padding="3" Margin="3"  />
-        <TextBox x:Name="spendingTime" Grid.Column="1" Grid.Row="1" Padding="3" Margin="3"  />
+        <TextBox x:Name="spendingTime" Grid.Column="1" Grid.Row="1" Padding="3" Margin="2.8,3.2,2.6,2.6"  />
         <ComboBox x:Name="comboBlockAddEditRegistrationForAVolunteer" Grid.Column="1" Grid.Row="2" Padding="3" Margin="3"  />
         <ComboBox x:Name="comboBlockAddEditRegistrationForANeeds" Grid.Column="1" Grid.Row="3" Padding="3" Margin="3"  />
         <ComboBox x:Name="comboBlockAddEditTypeService" Grid.Column="1" Grid.Row="4" Padding="3" Margin="3"  />

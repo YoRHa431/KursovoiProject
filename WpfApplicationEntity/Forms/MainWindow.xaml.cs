@@ -442,7 +442,7 @@ namespace WpfApplicationEntity
                 using (WpfApplicationEntity.API.MyDBContext objectMyDBContext =
                         new WpfApplicationEntity.API.MyDBContext())
                 {
-                    List<Volunteer> volunteers= WpfApplicationEntity.API.DatabaseRequest.GetVolunteers(objectMyDBContext).ToList();
+                    List<Volunteer> volunteers= DatabaseRequest.GetVolunteers(objectMyDBContext).ToList();
                     foreach (Volunteer volunteer in volunteers)
                     {
                         workSheet.Cells[i, 1].Interior.ColorIndex = 24;
@@ -578,6 +578,362 @@ namespace WpfApplicationEntity
                         needys.Add(item);
                 }
                 needysGrid.ItemsSource = needys;
+            }
+        }
+
+        private void ReportServiceButton_Click(object sender, RoutedEventArgs e)
+        {
+            {
+                Excel._Application exApp = new Excel.Application();
+                exApp.Workbooks.Add();
+                Worksheet workSheet = (Worksheet)exApp.ActiveSheet;
+                workSheet.Cells[1].EntireRow.Font.Bold = true;
+                workSheet.Cells.EntireRow.Font.Size = 14;
+                workSheet.Cells.EntireRow.Font.Name = "TimesNewRoman";
+                workSheet.Cells[1, 1].EntireColumn.ColumnWidth = 20;
+                workSheet.Cells[1, 1].Interior.ColorIndex = 17;
+                workSheet.Cells[1, 1] = "Название";
+                workSheet.Cells[1, 2].EntireColumn.ColumnWidth = 20;
+                workSheet.Cells[1, 2].Interior.ColorIndex = 17;
+                workSheet.Cells[1, 2] = "Затраченное время";
+                workSheet.Cells[1, 3].EntireColumn.ColumnWidth = 20;
+                workSheet.Cells[1, 3].Interior.ColorIndex = 17;
+                workSheet.Cells[1, 3] = "Тип услуги";
+                workSheet.Cells[1, 4].EntireColumn.ColumnWidth = 25;
+                workSheet.Cells[1, 4].Interior.ColorIndex = 17;
+                workSheet.Cells[1, 4] = "Регистрация нуждающегося";
+                workSheet.Cells[1, 5].EntireColumn.ColumnWidth = 15;
+                workSheet.Cells[1, 5].Interior.ColorIndex = 17;
+                workSheet.Cells[1, 5] = "Регистрация волонтера";
+                int i = 2;
+                try
+                {
+                    using (WpfApplicationEntity.API.MyDBContext objectMyDBContext =
+                            new WpfApplicationEntity.API.MyDBContext())
+                    {
+                        List<WpfApplicationEntity.API.Service> actions = WpfApplicationEntity.API.DatabaseRequest.GetServices(objectMyDBContext).ToList();
+                        foreach (WpfApplicationEntity.API.Service action in actions)
+                        {
+                            workSheet.Cells[i, 1].Interior.ColorIndex = 24;
+                            workSheet.Cells[i, 1] = action.Name;
+                            workSheet.Cells[i, 2].Interior.ColorIndex = 24;
+                            workSheet.Cells[i, 2] = action.SpendingTime;
+                            workSheet.Cells[i, 3].Interior.ColorIndex = 24;
+                            workSheet.Cells[i, 3] = action.Type_Service.Name;
+                            workSheet.Cells[i, 4].Interior.ColorIndex = 24;
+                            workSheet.Cells[i, 4] = action.Registration_for_a_needs.ActualDate;
+                            workSheet.Cells[i, 5].Interior.ColorIndex = 24;
+                            workSheet.Cells[i, 5] = action.Registration_for_a_volunteer.Date;
+                            i++;
+                        }
+                        string pathToXlsFile = Environment.CurrentDirectory +
+                            "\\Услуги.xls";
+                        workSheet.SaveAs(pathToXlsFile);
+                        exApp.Quit();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "ОШИБКА", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
+
+        private void ReportNeedyButton_Click(object sender, RoutedEventArgs e)
+        {
+            {
+                Excel._Application exApp = new Excel.Application();
+                exApp.Workbooks.Add();
+                Worksheet workSheet = (Worksheet)exApp.ActiveSheet;
+                workSheet.Cells[1].EntireRow.Font.Bold = true;
+                workSheet.Cells.EntireRow.Font.Size = 14;
+                workSheet.Cells.EntireRow.Font.Name = "TimesNewRoman";
+                workSheet.Cells[1, 1].EntireColumn.ColumnWidth = 20;
+                workSheet.Cells[1, 1].Interior.ColorIndex = 17;
+                workSheet.Cells[1, 1] = "Фамилия";
+                workSheet.Cells[1, 2].EntireColumn.ColumnWidth = 20;
+                workSheet.Cells[1, 2].Interior.ColorIndex = 17;
+                workSheet.Cells[1, 2] = "Имя";
+                workSheet.Cells[1, 3].EntireColumn.ColumnWidth = 20;
+                workSheet.Cells[1, 3].Interior.ColorIndex = 17;
+                workSheet.Cells[1, 3] = "Отчество";
+                workSheet.Cells[1, 4].EntireColumn.ColumnWidth = 25;
+                workSheet.Cells[1, 4].Interior.ColorIndex = 17;
+                workSheet.Cells[1, 4] = "Адрес";
+                workSheet.Cells[1, 5].EntireColumn.ColumnWidth = 15;
+                workSheet.Cells[1, 5].Interior.ColorIndex = 17;
+                workSheet.Cells[1, 5] = "Инвалидность";
+                workSheet.Cells[1, 6].EntireColumn.ColumnWidth = 15;
+                workSheet.Cells[1, 6].Interior.ColorIndex = 17;
+                workSheet.Cells[1, 6] = "Номер телефона";
+                workSheet.Cells[1, 7].EntireColumn.ColumnWidth = 20;
+                workSheet.Cells[1, 7].Interior.ColorIndex = 17;
+                workSheet.Cells[1, 7] = "Пол";
+                workSheet.Cells[1, 8].EntireColumn.ColumnWidth = 20;
+                workSheet.Cells[1, 8].Interior.ColorIndex = 17;
+                workSheet.Cells[1, 8] = "Регистрация нуждающегося";
+                workSheet.Cells[1, 9].EntireColumn.ColumnWidth = 20;
+                workSheet.Cells[1, 9].Interior.ColorIndex = 17;
+                workSheet.Cells[1, 9] = "Акция нуждающегося";
+                int i = 2;
+                try
+                {
+                    using (WpfApplicationEntity.API.MyDBContext objectMyDBContext =
+                            new WpfApplicationEntity.API.MyDBContext())
+                    {
+                        List<WpfApplicationEntity.API.Needy> actions = WpfApplicationEntity.API.DatabaseRequest.GetNeedys(objectMyDBContext).ToList();
+                        foreach (WpfApplicationEntity.API.Needy action in actions)
+                        {
+                            workSheet.Cells[i, 1].Interior.ColorIndex = 24;
+                            workSheet.Cells[i, 1] = action.MiddleName;
+                            workSheet.Cells[i, 2].Interior.ColorIndex = 24;
+                            workSheet.Cells[i, 2] = action.SurName;
+                            workSheet.Cells[i, 3].Interior.ColorIndex = 24;
+                            workSheet.Cells[i, 3] = action.LastName;
+                            workSheet.Cells[i, 4].Interior.ColorIndex = 24;
+                            workSheet.Cells[i, 4] = action.Addres;
+                            workSheet.Cells[i, 5].Interior.ColorIndex = 24;
+                            workSheet.Cells[i, 5] = action.Disability;
+                            workSheet.Cells[i, 6].Interior.ColorIndex = 24;
+                            workSheet.Cells[i, 6] = action.PhoneNumber;
+                            workSheet.Cells[i, 7].Interior.ColorIndex = 24;
+                            workSheet.Cells[i, 7] = action.Genus;
+                            workSheet.Cells[i, 8].Interior.ColorIndex = 24;
+                            workSheet.Cells[i, 8] = action.Registration_for_a_needs.ActualDate;
+                            workSheet.Cells[i, 9].Interior.ColorIndex = 24;
+                            workSheet.Cells[i, 9] = action.Action_for_the_needy.Name;
+                            i++;
+                        }
+                        string pathToXlsFile = Environment.CurrentDirectory +
+                            "\\Нуждающиеся.xls";
+                        workSheet.SaveAs(pathToXlsFile);
+                        exApp.Quit();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "ОШИБКА", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
+
+        private void ReportTypeActionButton_Click(object sender, RoutedEventArgs e)
+        {
+            {
+                Excel._Application exApp = new Excel.Application();
+                exApp.Workbooks.Add();
+                Worksheet workSheet = (Worksheet)exApp.ActiveSheet;
+                workSheet.Cells[1].EntireRow.Font.Bold = true;
+                workSheet.Cells.EntireRow.Font.Size = 14;
+                workSheet.Cells.EntireRow.Font.Name = "TimesNewRoman";
+                workSheet.Cells[1, 1].EntireColumn.ColumnWidth = 20;
+                workSheet.Cells[1, 1].Interior.ColorIndex = 17;
+                workSheet.Cells[1, 1] = "Название";
+                workSheet.Cells[1, 2].EntireColumn.ColumnWidth = 20;
+                workSheet.Cells[1, 2].Interior.ColorIndex = 17;
+                workSheet.Cells[1, 2] = "Описание";
+                workSheet.Cells[1, 3].EntireColumn.ColumnWidth = 20;
+                workSheet.Cells[1, 3].Interior.ColorIndex = 17;
+                workSheet.Cells[1, 3] = "Длительность";
+                int i = 2;
+                try
+                {
+                    using (WpfApplicationEntity.API.MyDBContext objectMyDBContext =
+                            new WpfApplicationEntity.API.MyDBContext())
+                    {
+                        List<WpfApplicationEntity.API.Type_Action> actions = WpfApplicationEntity.API.DatabaseRequest.GetType_Actions(objectMyDBContext).ToList();
+                        foreach (WpfApplicationEntity.API.Type_Action action in actions)
+                        {
+                            workSheet.Cells[i, 1].Interior.ColorIndex = 24;
+                            workSheet.Cells[i, 1] = action.Name;
+                            workSheet.Cells[i, 2].Interior.ColorIndex = 24;
+                            workSheet.Cells[i, 2] = action.Discription;
+                            workSheet.Cells[i, 3].Interior.ColorIndex = 24;
+                            workSheet.Cells[i, 3] = action.Duration;
+                            i++;
+                        }
+                        string pathToXlsFile = Environment.CurrentDirectory +
+                            "\\Типы_акций.xls";
+                        workSheet.SaveAs(pathToXlsFile);
+                        exApp.Quit();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "ОШИБКА", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
+
+        private void ReportTypeServiceButton_Click(object sender, RoutedEventArgs e)
+        {
+            {
+                Excel._Application exApp = new Excel.Application();
+                exApp.Workbooks.Add();
+                Worksheet workSheet = (Worksheet)exApp.ActiveSheet;
+                workSheet.Cells[1].EntireRow.Font.Bold = true;
+                workSheet.Cells.EntireRow.Font.Size = 14;
+                workSheet.Cells.EntireRow.Font.Name = "TimesNewRoman";
+                workSheet.Cells[1, 1].EntireColumn.ColumnWidth = 20;
+                workSheet.Cells[1, 1].Interior.ColorIndex = 17;
+                workSheet.Cells[1, 1] = "Название";
+                workSheet.Cells[1, 2].EntireColumn.ColumnWidth = 20;
+                workSheet.Cells[1, 2].Interior.ColorIndex = 17;
+                workSheet.Cells[1, 2] = "Описание";
+                int i = 2;
+                try
+                {
+                    using (WpfApplicationEntity.API.MyDBContext objectMyDBContext =
+                            new WpfApplicationEntity.API.MyDBContext())
+                    {
+                        List<WpfApplicationEntity.API.Type_Service> actions = WpfApplicationEntity.API.DatabaseRequest.GetType_Services(objectMyDBContext).ToList();
+                        foreach (WpfApplicationEntity.API.Type_Service action in actions)
+                        {
+                            workSheet.Cells[i, 1].Interior.ColorIndex = 24;
+                            workSheet.Cells[i, 1] = action.Name;
+                            workSheet.Cells[i, 2].Interior.ColorIndex = 24;
+                            workSheet.Cells[i, 2] = action.Discripsion;
+                            i++;
+                        }
+                        string pathToXlsFile = Environment.CurrentDirectory +
+                            "\\Типы_услуг.xls";
+                        workSheet.SaveAs(pathToXlsFile);
+                        exApp.Quit();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "ОШИБКА", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
+
+        private void ReportRegistrationForAVolunteerButton_Click(object sender, RoutedEventArgs e)
+        {
+            {
+                Excel._Application exApp = new Excel.Application();
+                exApp.Workbooks.Add();
+                Worksheet workSheet = (Worksheet)exApp.ActiveSheet;
+                workSheet.Cells[1].EntireRow.Font.Bold = true;
+                workSheet.Cells.EntireRow.Font.Size = 14;
+                workSheet.Cells.EntireRow.Font.Name = "TimesNewRoman";
+                workSheet.Cells[1, 1].EntireColumn.ColumnWidth = 20;
+                workSheet.Cells[1, 1].Interior.ColorIndex = 17;
+                workSheet.Cells[1, 1] = "Дата";
+                int i = 2;
+                try
+                {
+                    using (WpfApplicationEntity.API.MyDBContext objectMyDBContext =
+                            new WpfApplicationEntity.API.MyDBContext())
+                    {
+                        List<WpfApplicationEntity.API.Registration_for_a_volunteer> actions = WpfApplicationEntity.API.DatabaseRequest.GetRegistration_for_a_volunteers(objectMyDBContext).ToList();
+                        foreach (WpfApplicationEntity.API.Registration_for_a_volunteer action in actions)
+                        {
+                            workSheet.Cells[i, 1].Interior.ColorIndex = 24;
+                            workSheet.Cells[i, 1] = action.Date;
+                            i++;
+                        }
+                        string pathToXlsFile = Environment.CurrentDirectory +
+                            "\\Регистрации_волонтеров.xls";
+                        workSheet.SaveAs(pathToXlsFile);
+                        exApp.Quit();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "ОШИБКА", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
+
+        private void ReportActionForTheNeedyButton_Click(object sender, RoutedEventArgs e)
+        {
+            {
+                Excel._Application exApp = new Excel.Application();
+                exApp.Workbooks.Add();
+                Worksheet workSheet = (Worksheet)exApp.ActiveSheet;
+                workSheet.Cells[1].EntireRow.Font.Bold = true;
+                workSheet.Cells.EntireRow.Font.Size = 14;
+                workSheet.Cells.EntireRow.Font.Name = "TimesNewRoman";
+                workSheet.Cells[1, 1].EntireColumn.ColumnWidth = 20;
+                workSheet.Cells[1, 1].Interior.ColorIndex = 17;
+                workSheet.Cells[1, 1] = "Название";
+                int i = 2;
+                try
+                {
+                    using (WpfApplicationEntity.API.MyDBContext objectMyDBContext =
+                            new WpfApplicationEntity.API.MyDBContext())
+                    {
+                        List<WpfApplicationEntity.API.Action_for_the_needy> actions = WpfApplicationEntity.API.DatabaseRequest.GetAction_for_the_needys(objectMyDBContext).ToList();
+                        foreach (WpfApplicationEntity.API.Action_for_the_needy action in actions)
+                        {
+                            workSheet.Cells[i, 1].Interior.ColorIndex = 24;
+                            workSheet.Cells[i, 1] = action.Name;
+                            i++;
+                        }
+                        string pathToXlsFile = Environment.CurrentDirectory +
+                            "\\Акции_нуждающихся.xls";
+                        workSheet.SaveAs(pathToXlsFile);
+                        exApp.Quit();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "ОШИБКА", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
+
+        private void ReportRegistrationForANeedsButton_Click(object sender, RoutedEventArgs e)
+        {
+            {
+                Excel._Application exApp = new Excel.Application();
+                exApp.Workbooks.Add();
+                Worksheet workSheet = (Worksheet)exApp.ActiveSheet;
+                workSheet.Cells[1].EntireRow.Font.Bold = true;
+                workSheet.Cells.EntireRow.Font.Size = 14;
+                workSheet.Cells.EntireRow.Font.Name = "TimesNewRoman";
+                workSheet.Cells[1, 1].EntireColumn.ColumnWidth = 20;
+                workSheet.Cells[1, 1].Interior.ColorIndex = 17;
+                workSheet.Cells[1, 1] = "Планируемая дата";
+                workSheet.Cells[1, 2].EntireColumn.ColumnWidth = 20;
+                workSheet.Cells[1, 2].Interior.ColorIndex = 17;
+                workSheet.Cells[1, 2] = "Дата подачи";
+                workSheet.Cells[1, 3].EntireColumn.ColumnWidth = 20;
+                workSheet.Cells[1, 3].Interior.ColorIndex = 17;
+                workSheet.Cells[1, 3] = "Фактическая дата";
+                workSheet.Cells[1, 4].EntireColumn.ColumnWidth = 25;
+                workSheet.Cells[1, 4].Interior.ColorIndex = 17;
+                workSheet.Cells[1, 4] = "Запись волонтера";
+                int i = 2;
+                try
+                {
+                    using (WpfApplicationEntity.API.MyDBContext objectMyDBContext =
+                            new WpfApplicationEntity.API.MyDBContext())
+                    {
+                        List<WpfApplicationEntity.API.Registration_for_a_needs> actions = WpfApplicationEntity.API.DatabaseRequest.GetRegistration_for_a_needss(objectMyDBContext).ToList();
+                        foreach (WpfApplicationEntity.API.Registration_for_a_needs action in actions)
+                        {
+                            workSheet.Cells[i, 1].Interior.ColorIndex = 24;
+                            workSheet.Cells[i, 1] = action.PlannedDate;
+                            workSheet.Cells[i, 2].Interior.ColorIndex = 24;
+                            workSheet.Cells[i, 2] = action.ApplicationDate;
+                            workSheet.Cells[i, 3].Interior.ColorIndex = 24;
+                            workSheet.Cells[i, 3] = action.ActualDate;
+                            workSheet.Cells[i, 4].Interior.ColorIndex = 24;
+                            workSheet.Cells[i, 4] = action.Registration_for_a_volunteer.Date;
+                            i++;
+                        }
+                        string pathToXlsFile = Environment.CurrentDirectory +
+                            "\\Регистрация_нуждающегося.xls";
+                        workSheet.SaveAs(pathToXlsFile);
+                        exApp.Quit();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "ОШИБКА", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
         }
     }

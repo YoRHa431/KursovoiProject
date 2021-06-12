@@ -12,7 +12,7 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Label Grid.Column="0" Grid.Row="0" Content="Name" Padding="3" Margin="3"  />
+        <Label Grid.Column="0" Grid.Row="0" Content="Наименование" Padding="3" Margin="3"  />
         <TextBox x:Name="Name" Grid.Column="1" Grid.Row="0" Padding="3" Margin="3"  />
         <Button x:Name="ButtonAddEditGroup"  Grid.Column="0" Grid.Row="5" Content="Добавить" Grid.ColumnSpan="2" Padding="3" Margin="3" Click="ButtonAddEditAction_Click"  />
     </Grid>

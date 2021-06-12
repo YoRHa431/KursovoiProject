@@ -6,7 +6,7 @@ using System.Text;
 
 namespace WpfApplicationEntity.API
 {
-    class Registration_for_a_needs
+    public class Registration_for_a_needs
     {
         [Key]
         public int ID { get; set; }

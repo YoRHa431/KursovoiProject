@@ -6,7 +6,7 @@ using System.Text;
 
 namespace WpfApplicationEntity.API
 {
-    class Type_Service
+    public class Type_Service
     {
         [Key]
         public int ID { get; set; }

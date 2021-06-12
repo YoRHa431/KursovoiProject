@@ -37,3 +37,81 @@ C:\Учёба 3 курс\Курсовая работа КПЯП\WpfApplicationEn
 C:\Учёба 3 курс\Курсовая работа КПЯП\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\ActionForTheNeedy.g.cs
 C:\Учёба 3 курс\Курсовая работа КПЯП\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\Autorization.baml
 C:\Учёба 3 курс\Курсовая работа КПЯП\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\Autorization.g.cs
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\bin\Debug\WpfApplicationEntity.exe.config
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\bin\Debug\WpfApplicationEntity.exe
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\bin\Debug\WpfApplicationEntity.pdb
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\bin\Debug\EntityFramework.dll
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\bin\Debug\EntityFramework.SqlServer.dll
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\bin\Debug\EntityFramework.xml
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\bin\Debug\EntityFramework.SqlServer.xml
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\WpfApplicationEntity.csprojAssemblyReference.cache
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\ActionForTheNeedy.baml
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\Autorization.baml
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\MainWindow.baml
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\Action.g.cs
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\ActionForTheNeedy.g.cs
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\Autorization.g.cs
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\Needy.g.cs
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\RegistrationFoAVolunteer.g.cs
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\RegistrationForANeeds.g.cs
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\Service.g.cs
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\TypeAction.g.cs
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\TypeService.g.cs
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\VolunteerWindow.g.cs
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\MainWindow.g.cs
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\App.g.cs
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\WpfApplicationEntity_MarkupCompile.cache
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\WpfApplicationEntity_MarkupCompile.lref
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\Action.baml
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\Needy.baml
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\RegistrationFoAVolunteer.baml
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\RegistrationForANeeds.baml
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\Service.baml
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\TypeAction.baml
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\TypeService.baml
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\VolunteerWindow.baml
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\WpfApplicationEntity.g.resources
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\WpfApplicationEntity.Properties.Resources.resources
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\WpfApplicationEntity.csproj.GenerateResource.cache
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\WpfApplicationEntity.csproj.CoreCompileInputs.cache
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\WpfApplicationEntity.csproj.CopyComplete
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\WpfApplicationEntity.exe
+D:\downloads\POZEZDA\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\WpfApplicationEntity.pdb
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\bin\Debug\WpfApplicationEntity.exe.config
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\WpfApplicationEntity.exe
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\WpfApplicationEntity.pdb
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\bin\Debug\WpfApplicationEntity.exe
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\bin\Debug\WpfApplicationEntity.pdb
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\bin\Debug\EntityFramework.dll
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\bin\Debug\EntityFramework.SqlServer.dll
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\bin\Debug\EntityFramework.xml
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\bin\Debug\EntityFramework.SqlServer.xml
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\WpfApplicationEntity.csprojResolveAssemblyReference.cache
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\ActionForTheNeedy.baml
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\Autorization.baml
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\MainWindow.baml
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\Action.g.cs
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\ActionForTheNeedy.g.cs
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\Autorization.g.cs
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\Needy.g.cs
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\RegistrationFoAVolunteer.g.cs
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\RegistrationForANeeds.g.cs
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\Service.g.cs
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\TypeAction.g.cs
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\TypeService.g.cs
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\VolunteerWindow.g.cs
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\MainWindow.g.cs
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\App.g.cs
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\WpfApplicationEntity_MarkupCompile.cache
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\WpfApplicationEntity_MarkupCompile.lref
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\Action.baml
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\Needy.baml
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\RegistrationFoAVolunteer.baml
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\RegistrationForANeeds.baml
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\Service.baml
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\TypeAction.baml
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\TypeService.baml
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\Forms\VolunteerWindow.baml
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\WpfApplicationEntity.g.resources
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\WpfApplicationEntity.Properties.Resources.resources
+C:\Учёба 3 курс\Курсовая работа КПЯП\Резерв\Kursovaia\WpfApplicationEntity\WpfApplicationEntity\obj\Debug\WpfApplicationEntity.csproj.GenerateResource.Cache
